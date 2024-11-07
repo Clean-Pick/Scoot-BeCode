@@ -1,0 +1,94 @@
+@use 'reset.sass'
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+
+
+// Déclaration des couleurs de base
+$yellow: rgb(252, 183, 43)
+$navy: rgb(73, 85, 103)
+$grey: rgb(147, 156, 170)
+$grey-light: rgb(229, 236, 244)
+$yellow-light: rgb(255, 244, 223)
+$snow: rgb(242, 245, 249)
+
+// Déclaration du style du texte & button
+body
+  h1
+    font-family: space mono, bold, sans-serif
+    font-size: 56px
+    line-height: 56px
+    letter-spacing: -2.5px
+
+  h2
+    font-family: space mono, bold, sans-serif
+    font-size: 48px
+    line-height: 48px
+    letter-spacing: -2.14px
+
+  h3
+    font-family: space mono, bold, sans-serif
+    font-size: 40px
+    line-height: 48px
+    letter-spacing: -1.79px
+
+  h4
+    font-family: space mono, bold, sans-serif
+    font-size: 24px
+    line-height: 28px
+    letter-spacing: -1.07px
+
+  p
+    font-family: lexend Deca, regular, sans-serif
+    font-size: 15px
+    line-height: 25px
+
+  button
+    font-family: space mono, bold, sans-serif
+    font-size: 15px
+    line-height: 25px
+
+    background-color: $yellow
+    color: $snow
+
+    border: none
+
+    width: 195px
+    height: 53px
+
+    text-transform: capitalize
+
+    &:hover
+      background-color: $snow
+      color: $yellow
+
+      border: 2px solid $yellow
+
+  .btn
+    text-decoration: none
+
+    background-color: $yellow
+    border: none
+
+    padding: 1.1em 4.5em
+
+    &:hover
+      background-color: $snow
+      border: 2px solid $yellow
+
+      .btn__text
+        color: $yellow
+
+
+    .btn__text
+      font-family: space mono, bold, sans-serif
+      font-size: 15px
+      line-height: 25px
+
+      color: $snow
+
+
+      text-transform: capitalize
+      text-decoration: none
+      text-underline: none

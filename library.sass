@@ -14,10 +14,25 @@ $grey-light: rgb(229, 236, 244)
 $yellow-light: rgb(255, 244, 223)
 $snow: rgb(242, 245, 249)
 
+// Breakpoints
+$mobile: (max-width: 375px)
+$tablet: (min-width: 376px) and (max-width: 768px)
+$desktop: (min-width: 769px)
 
-// Déclaration des columns de base Desktop
+
+// Déclaration des columns de base
+$grid__desktop: 1fr 1110px 1fr
+$grid__tablet: 40px 12fr 40px
+$grid__mobile: 1fr 1fr 1fr
+
+// Déclaration MainGrid
 .mainGrid
-  grid-template-columns: 1fr 1050px 1fr
+  display: grid
+
+// Grid à 12 colonnes pour les containers
+$subGrid: repeat(12, 1fr)
+// Centrer les subgrid
+$subgrid-column: 2
 
 
 // Déclaration du style du texte & button
@@ -65,6 +80,8 @@ body
     height: 53px
 
     text-transform: capitalize
+
+    transition: background-color .2s, color .2s, border .2s
 
     &:hover
       background-color: $snow

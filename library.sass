@@ -1,4 +1,4 @@
-@use 'reset.sass'
+@use './css/reset.sass'
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap')
 
@@ -12,6 +12,33 @@ $grey: rgb(147, 156, 170)
 $grey-light: rgb(229, 236, 244)
 $yellow-light: rgb(255, 244, 223)
 $snow: rgb(242, 245, 249)
+
+//Déclaration de la grid globale
+.masterContainer
+  display: grid
+  grid-template-columns: 1fr 1050px 1fr
+  grid-template-rows: 1fr
+  gap: 10px
+
+  background-color: #00001A
+
+.mainGrid
+  grid-column: 2
+  grid-row: 1
+
+  display: grid
+  grid-template-columns: repeat(12, minmax(65px,1fr))
+  gap: 10px
+
+  height: 100vh
+  background-color: #ffffff
+
+.column
+  background-color: red
+  opacity: 0.2
+
+  height: 100%
+
 
 // Déclaration du style du texte & button
 body

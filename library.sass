@@ -8,6 +8,7 @@
 // Déclaration des couleurs de base
 $yellow: rgb(252, 183, 43)
 $navy: rgb(73, 85, 103)
+$dim-gey: rgb(147, 156, 170)
 $grey: rgb(147, 156, 170)
 $grey-light: rgb(229, 236, 244)
 $yellow-light: rgb(255, 244, 223)
@@ -83,10 +84,13 @@ body
 
     padding: 1.1em 4.5em
 
+    transition: background-color .2s, outline .2s
+
 
     &:hover
       background-color: $snow
-      border: 2px solid $yellow
+      outline: 2px solid $yellow
+      outline-offset: -2px
 
       .btn__text
         color: $yellow
@@ -104,3 +108,5 @@ body
       text-transform: capitalize
       text-decoration: none
       text-underline: none
+
+      transition: color .2s

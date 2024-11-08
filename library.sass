@@ -13,31 +13,10 @@ $grey-light: rgb(229, 236, 244)
 $yellow-light: rgb(255, 244, 223)
 $snow: rgb(242, 245, 249)
 
-//Déclaration de la grid globale
-.masterContainer
-  display: grid
-  grid-template-columns: 1fr 1050px 1fr
-  grid-template-rows: 1fr
-  gap: 10px
 
-  background-color: #00001A
-
+// Déclaration des columns de base Desktop
 .mainGrid
-  grid-column: 2
-  grid-row: 1
-
-  display: grid
-  grid-template-columns: repeat(12, minmax(65px,1fr))
-  gap: 10px
-
-  height: 100vh
-  background-color: #ffffff
-
-.column
-  background-color: red
-  opacity: 0.2
-
-  height: 100%
+  grid-template-columns: 1fr 1050px 1fr
 
 
 // Déclaration du style du texte & button
@@ -93,12 +72,17 @@ body
       border: 2px solid $yellow
 
   .btn
+    display: flex
+    justify-content: center
+    align-items: center
+
     text-decoration: none
 
     background-color: $yellow
     border: none
 
     padding: 1.1em 4.5em
+
 
     &:hover
       background-color: $snow
@@ -112,6 +96,7 @@ body
       font-family: space mono, bold, sans-serif
       font-size: 15px
       line-height: 25px
+      letter-spacing: 0
 
       color: $snow
 

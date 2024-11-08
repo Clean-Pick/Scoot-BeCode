@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -147,4 +149,96 @@ img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}/*# sourceMappingURL=reset.css.map */
+}
+
+.masterContainer {
+  display: grid;
+  grid-template-columns: 1fr 1050px 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  background-color: #00001A;
+}
+
+.mainGrid {
+  grid-column: 2;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(65px, 1fr));
+  gap: 10px;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+.column {
+  background-color: red;
+  opacity: 0.2;
+  height: 100%;
+}
+
+body h1 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+}
+body h2 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14px;
+}
+body h3 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.79px;
+}
+body h4 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07px;
+}
+body p {
+  font-family: lexend Deca, regular, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+body button {
+  font-family: space mono, bold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  background-color: rgb(252, 183, 43);
+  color: rgb(242, 245, 249);
+  border: none;
+  width: 195px;
+  height: 53px;
+  text-transform: capitalize;
+}
+body button:hover {
+  background-color: rgb(242, 245, 249);
+  color: rgb(252, 183, 43);
+  border: 2px solid rgb(252, 183, 43);
+}
+body .btn {
+  text-decoration: none;
+  background-color: rgb(252, 183, 43);
+  border: none;
+  padding: 1.1em 4.5em;
+}
+body .btn:hover {
+  background-color: rgb(242, 245, 249);
+  border: 2px solid rgb(252, 183, 43);
+}
+body .btn:hover .btn__text {
+  color: rgb(252, 183, 43);
+}
+body .btn .btn__text {
+  font-family: space mono, bold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgb(242, 245, 249);
+  text-transform: capitalize;
+  text-decoration: none;
+  text-underline: none;
+}/*# sourceMappingURL=library.css.map */

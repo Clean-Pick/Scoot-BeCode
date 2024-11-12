@@ -1,4 +1,4 @@
-@use './css/reset.sass'
+@use './css/reset.sass' as *
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap')
 
@@ -8,36 +8,31 @@
 // Déclaration des couleurs de base
 $yellow: rgb(252, 183, 43)
 $navy: rgb(73, 85, 103)
+$dim-grey: rgb(147, 156, 170)
 $grey: rgb(147, 156, 170)
 $grey-light: rgb(229, 236, 244)
 $yellow-light: rgb(255, 244, 223)
 $snow: rgb(242, 245, 249)
 
-//Déclaration de la grid globale
-.masterContainer
-  display: grid
-  grid-template-columns: 1fr 1050px 1fr
-  grid-template-rows: 1fr
-  gap: 10px
+// Breakpoints
+$mobile: (max-width: 375px)
+$tablet: (min-width: 376px) and (max-width: 768px)
+$desktop: (min-width: 769px)
 
-  background-color: #00001A
 
+// Déclaration des columns de base
+$grid__desktop: 1fr 1110px 1fr
+$grid__tablet: 40px 12fr 40px
+$grid__mobile: 1fr 1fr 1fr
+
+// Déclaration MainGrid
 .mainGrid
-  grid-column: 2
-  grid-row: 1
-
   display: grid
-  grid-template-columns: repeat(12, minmax(65px,1fr))
-  gap: 10px
 
-  height: 100vh
-  background-color: #ffffff
-
-.column
-  background-color: red
-  opacity: 0.2
-
-  height: 100%
+// Grid à 12 colonnes pour les containers
+$subGrid: repeat(12, 1fr)
+// Centrer les subgrid
+$subgrid-column: 2
 
 
 // Déclaration du style du texte & button
@@ -48,11 +43,15 @@ body
     line-height: 56px
     letter-spacing: -2.5px
 
+    color: $navy
+
   h2
     font-family: space mono, bold, sans-serif
     font-size: 48px
     line-height: 48px
     letter-spacing: -2.14px
+
+    color: $navy
 
   h3
     font-family: space mono, bold, sans-serif
@@ -71,6 +70,8 @@ body
     font-size: 15px
     line-height: 25px
 
+    color: $dim-grey
+
   button
     font-family: space mono, bold, sans-serif
     font-size: 15px
@@ -86,6 +87,8 @@ body
 
     text-transform: capitalize
 
+    transition: background-color .2s, color .2s, border .2s
+
     &:hover
       background-color: $snow
       color: $yellow
@@ -93,6 +96,10 @@ body
       border: 2px solid $yellow
 
   .btn
+    display: flex
+    justify-content: center
+    align-items: center
+
     text-decoration: none
 
     background-color: $yellow
@@ -100,9 +107,13 @@ body
 
     padding: 1.1em 4.5em
 
+    transition: background-color .2s, outline .2s
+
+
     &:hover
       background-color: $snow
-      border: 2px solid $yellow
+      outline: 2px solid $yellow
+      outline-offset: -2px
 
       .btn__text
         color: $yellow
@@ -112,6 +123,7 @@ body
       font-family: space mono, bold, sans-serif
       font-size: 15px
       line-height: 25px
+      letter-spacing: 0
 
       color: $snow
 
@@ -119,3 +131,5 @@ body
       text-transform: capitalize
       text-decoration: none
       text-underline: none
+
+      transition: color .2s

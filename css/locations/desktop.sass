@@ -1,0 +1,140 @@
+@use '../../library' as *
+
+.headContainer
+  display: grid
+  grid-template-columns: $grid__desktop
+
+  overflow: hidden
+
+  .mask
+
+    grid-area: 1/1/1/13
+    background-color: #2F3B59
+    opacity: 0.75
+    z-index: 1
+
+  img
+    grid-area: 1/1/1/13
+    object-fit: contain
+    background-color: #2F3B59
+
+
+    z-index: -1
+
+  .head
+    grid-column: $subgrid-column
+    grid-row: 1
+
+    z-index: 2
+
+    align-items: center
+
+
+    display: grid
+    grid-template-columns: $subGrid
+
+
+    h1
+      grid-area: 1/1/1/3
+
+      color: $snow
+
+.worldMapContainer
+  display: grid
+  grid-template-columns: $grid__desktop
+
+  position: relative
+
+  .worldMap
+    grid-column: $subgrid-column
+
+    margin-top: 120px
+    margin-bottom: 120px
+
+    width: 1110px
+    height: 543px
+
+    position: relative
+
+    img
+      grid-column: 1
+      grid-row: 1
+
+      width: 100%
+      height: 100%
+
+    .worldMap__item--newYork, .worldMap__item--london, .worldMap__item--yokohama, .worldMap__item--jakarta
+      width: 189px
+      height: 72px
+
+      position: absolute
+
+      display: flex
+      justify-content: center
+      align-items: center
+      text-align: center
+
+      background-color: $yellow
+
+      h4
+        width: 100%
+
+      .triangle
+        position: absolute
+
+        bottom: -16px
+
+        width: 0
+        height: 0
+
+        border-left: 16px solid transparent
+        border-right: 16px solid transparent
+
+        border-top: 16px solid $yellow
+
+
+    .worldMap__item--newYork
+      top: 71.44px
+      left: 147px
+
+    .worldMap__item--london
+      top: 18px
+      left: 393px
+
+    .worldMap__item--yokohama
+      top: 78px
+      left: 856px
+
+    .worldMap__item--jakarta
+      top: 251px
+      left: 779px
+
+.notListedContainer
+  display: grid
+  grid-template-columns: $grid__desktop
+
+  .notListedGrid
+    grid-column: $subgrid-column
+    display: grid
+    grid-template-columns: $subGrid
+
+    justify-content: center
+    align-items: center
+
+    margin-bottom: 120px
+
+    h2
+      grid-area: 1/1/1/5
+      justify-self: start
+
+    p
+      grid-area: 1/5/1/10
+      text-align: left
+
+      width: 100%
+
+    a
+      grid-area: 1/10/1/13
+
+      width: 240px
+      justify-self: end

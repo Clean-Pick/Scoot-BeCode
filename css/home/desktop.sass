@@ -14,11 +14,37 @@
 
     height: 650px
 
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 1fr
+
+    margin-bottom: 160px
+
+    .mask
+      grid-column: 1
+      grid-row: 1
+
+      height: 650px
+      width: 100%
+
+      background-color: #2F3B59
+
+      opacity: 0.75
+
+      z-index: 1
+
+      overflow: hidden
+
     img
-      height: 100%
+      grid-column: 1
+      grid-row: 1
+
+      height: 650px
       width: 100%
 
       object-fit: cover
+
+      z-index: 0
 
   .home
     grid-column: $subgrid-column
@@ -37,6 +63,8 @@
     overflow: hidden
 
     color: $snow
+
+    z-index: 2
 
     h1
       grid-area: 1 / 2 / 1 / 8

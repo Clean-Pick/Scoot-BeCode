@@ -154,11 +154,6 @@ img {
   display: grid;
 }
 
-.header {
-  grid-column: 2;
-  height: 96px;
-}
-
 body h1 {
   font-family: space mono, bold, sans-serif;
   font-size: 56px;
@@ -300,11 +295,28 @@ body .btn .btn__text {
   .img {
     grid-area: 2/1/2/4;
     height: 650px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 160px;
+  }
+  .img .mask {
+    grid-column: 1;
+    grid-row: 1;
+    height: 650px;
+    width: 100%;
+    background-color: #2F3B59;
+    opacity: 0.75;
+    z-index: 1;
+    overflow: hidden;
   }
   .img img {
-    height: 100%;
+    grid-column: 1;
+    grid-row: 1;
+    height: 650px;
     width: 100%;
     object-fit: cover;
+    z-index: 0;
   }
   .home {
     grid-column: 2;
@@ -318,6 +330,7 @@ body .btn .btn__text {
     align-items: center;
     overflow: hidden;
     color: rgb(242, 245, 249);
+    z-index: 2;
   }
   .home h1 {
     grid-area: 1/2/1/8;

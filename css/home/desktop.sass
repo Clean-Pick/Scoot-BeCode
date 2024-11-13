@@ -1,0 +1,185 @@
+@use '../../library' as *
+@use 'tablet'
+
+@media (min-width: 769px)
+  .mainGrid
+    grid-template-columns: $grid__desktop
+
+  .header
+    grid-column: $subgrid-column
+    display: block
+
+  .img
+    grid-area: 2 / 1 / 2 / 4
+
+    height: 650px
+
+    img
+      height: 100%
+      width: 100%
+
+      object-fit: cover
+
+  .home
+    grid-column: $subgrid-column
+    grid-row: $subgrid-column
+
+    display: grid
+    grid-template-columns: $subGrid
+    grid-template-rows: repeat(3, 1fr)
+
+    height: 650px
+    gap: 40px
+
+    justify-content: center
+    align-items: center
+
+    overflow: hidden
+
+    color: $snow
+
+    h1
+      grid-area: 1 / 2 / 1 / 8
+      margin-top: 153px
+
+    p
+      grid-area: 2 / 3 / 2 / 8
+
+
+    a
+      grid-area: 3 / 3 / 3 / 6
+      height: 53px
+      width: 250px
+
+
+  .stepsContainer
+    grid-column: $subgrid-column
+    grid-row: 3
+
+    display: grid
+    grid-template-columns: 1fr 1110px 1fr
+
+    .stepsGrid
+      position: relative
+
+      grid-column: 2
+
+      margin-top: 160px
+      margin-bottom: 200px
+
+      display: grid
+      grid-template-columns: $subGrid
+      grid-template-rows: repeat(3, 1fr)
+
+      gap: 27px
+
+      justify-content: center
+      align-items: center
+
+      hr
+        grid-row: 1
+        grid-column-start: 1
+        grid-column-end: 10
+
+        border: none
+
+        height: 15px
+        width: 100%
+
+        background-color: $grey-light
+
+      img
+        height: 96px
+        width: 96px
+
+        grid-row: 1
+
+        object-fit: contain
+
+      .step1, .step2, .step3
+        justify-content: center
+        align-items: center
+
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(3, 1fr)
+
+        overflow: hidden
+
+      p
+        margin-top: -10px
+        color: $dim-gey
+
+      h4
+        color: $navy
+
+      .step1
+        grid-area: 1 / 1 / 4 / 5
+
+      .step2
+        grid-area: 1 / 5 / 4 / 9
+
+      .step3
+        grid-area: 1 / 9 / 4 / 13
+
+  .contentContainer
+    grid-column: $subgrid-column
+    grid-row: 4
+
+    display: grid
+    grid-template-columns: 1fr 1110px 1fr
+
+    .contentGrid
+      grid-column: 2
+
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, 1fr)
+
+      gap: 160px
+
+    .item__container
+      grid-row: auto
+
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr
+
+      gap: 220px
+
+      justify-content: center
+      align-items: center
+
+    .item__content--left
+      grid-column: 1
+      grid-row: 1
+
+    .item__content--right
+      grid-column: 2
+      grid-row: 1
+
+    p
+      margin-top: 24px
+      margin-bottom: 40px
+
+      color: $dim-gey
+
+    a
+      width: 250px
+
+    h2
+      color: $navy
+
+
+    .item__img--left
+      grid-column: 1
+      grid-row: 1
+
+      border-radius: 50%
+
+    .item__img--right
+      grid-column: 2
+      grid-row: 1
+
+    img
+      border-radius: 50%

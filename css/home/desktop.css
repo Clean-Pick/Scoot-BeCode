@@ -154,17 +154,24 @@ img {
   display: grid;
 }
 
+.header {
+  grid-column: 2;
+  height: 96px;
+}
+
 body h1 {
   font-family: space mono, bold, sans-serif;
   font-size: 56px;
   line-height: 56px;
   letter-spacing: -2.5px;
+  color: rgb(73, 85, 103);
 }
 body h2 {
   font-family: space mono, bold, sans-serif;
   font-size: 48px;
   line-height: 48px;
   letter-spacing: -2.14px;
+  color: rgb(73, 85, 103);
 }
 body h3 {
   font-family: space mono, bold, sans-serif;
@@ -182,6 +189,7 @@ body p {
   font-family: lexend Deca, regular, sans-serif;
   font-size: 15px;
   line-height: 25px;
+  color: rgb(147, 156, 170);
 }
 body button {
   font-family: space mono, bold, sans-serif;
@@ -314,14 +322,17 @@ body .btn .btn__text {
   .home h1 {
     grid-area: 1/2/1/8;
     margin-top: 153px;
+    color: white;
   }
   .home p {
     grid-area: 2/3/2/8;
+    color: white;
   }
   .home a {
     grid-area: 3/3/3/6;
     height: 53px;
     width: 250px;
+    margin-bottom: 153px;
   }
   .stepsContainer {
     grid-column: 2;

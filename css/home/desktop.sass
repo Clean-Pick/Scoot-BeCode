@@ -1,13 +1,15 @@
 @use '../../library' as *
-@use 'tablet'
+@use 'mobile' as *
+@use 'tablet' as *
 
-@media (min-width: 769px)
+@media screen and (min-width: 769px)
   .mainGrid
     grid-template-columns: $grid__desktop
 
-  .header
+  header, footer
     grid-column: $subgrid-column
     display: block
+
 
   .img
     grid-area: 2 / 1 / 2 / 4

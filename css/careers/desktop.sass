@@ -1,5 +1,8 @@
 @use '../../library' as *
+@use 'mobile'
+@use 'tablet'
 
+@media screen and (min-width: 769px)
 .headContainer
   display: grid
   grid-template-columns: $grid__desktop
@@ -147,6 +150,7 @@
     .values__item__text
       margin-top: 27px
       text-align: center
+
 .jobsContainer
   display: grid
   grid-template-columns: $grid__desktop
@@ -173,5 +177,6 @@
 
     .jobs__item__jobInfos
       width: 50%
+
       p
         color: $navy

@@ -1,14 +1,13 @@
 @use '../../library' as *
 
 
-@media screen and (min-width: 376px) and (max-width: 768px)
+@media screen and (min-width: 426px) and (max-width: 768px)
   .mainGrid
     grid-template-columns: $grid__tablet
 
   header, footer
     grid-column: $subgrid-column
     height: 96px
-
 
   .img
     grid-area: 2 / 1 / 2 / 4
@@ -116,6 +115,7 @@
     grid-column: $subgrid-column
 
     .contentGrid
+      display: grid
       grid-template-rows: 1fr 1fr 1fr
 
       .item__container

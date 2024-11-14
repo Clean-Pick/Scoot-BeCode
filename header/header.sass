@@ -1,11 +1,15 @@
-@use './library' as *  // Importer tous les styles de library.sass
+@use '../library' as *  
 
+// Version desktop par défaut
 header
   color: $snow
   padding: 20px
   display: flex
   align-items: center
   justify-content: space-between
+
+  .burger-icon
+    display: none 
 
   img
     width: 107.82px
@@ -15,7 +19,8 @@ header
 
   nav
     display: flex
-    gap: 1.5em  
+    flex-direction: row
+    gap: 1.5em
     align-items: center
 
     a
@@ -30,7 +35,6 @@ header
         line-height: 25px
         letter-spacing: -1.07px
         margin: 0  // Enlever la marge par défaut
-        
 
   button
     background-color: $yellow
@@ -41,9 +45,57 @@ header
     font-family: space mono, sans-serif
     font-size: 15px
     line-height: 25px
-    margin-left: auto 
+    margin-left: auto
     margin-right: 7em
 
     &:hover
       background-color: $snow
       color: $yellow
+
+// Version mobile (375px) avec @media query
+@media (max-width: 768px)
+  header
+    padding: 10px 20px
+    justify-content: space-between
+
+    .burger-icon
+      display: block // Afficher l'icône burger en mobile
+      font-size: 30px
+      cursor: pointer
+      transition: transform 0.3s
+
+    img
+      margin: 0 auto // Centrer le logo
+      width: 107.82px
+      height: 28.56px
+
+    nav
+      display: none // Cacher le menu en version mobile, affiché avec le burger
+
+    .side-nav
+      height: 100%
+      width: 100% // Pleine largeur en version mobile
+      position: fixed
+      z-index: 1
+      top: 0
+      left: -100% // Menu caché en dehors de l’écran par défaut
+      background-color: #111
+      transition: 0.3s
+      padding-top: 60px
+
+      ul
+        padding: 0
+        list-style-type: none
+
+        li
+          margin-bottom: 20px
+
+          a, button
+            padding: 8px 32px
+            text-decoration: none
+            font-size: 20px
+            color: white
+            display: block
+
+            &:hover
+              background-color: #575757

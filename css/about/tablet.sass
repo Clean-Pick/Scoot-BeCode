@@ -1,0 +1,241 @@
+@use "../../library" as *
+
+@media screen and (min-width: 426px) and (max-width: 1025px)
+  .headContainer
+    display: grid
+    grid-template-columns: $grid__tablet
+
+    overflow: hidden
+
+    .mask
+      grid-row: 2
+
+      grid-column-start: 1
+      grid-column-end: 4
+      background-color: #2F3B59
+      opacity: 0.75
+      z-index: 1
+
+    img
+      grid-row: 2
+
+      width: 100%
+      height: auto
+
+      grid-column-start: 1
+      grid-column-end: 4
+      object-fit: contain
+      background-color: #2F3B59
+      z-index: 0
+
+    .head
+      grid-column: $subgrid-column
+      grid-row: 2
+
+      z-index: 2
+      align-items: center
+      display: grid
+
+      grid-template-columns: $subGrid
+
+      h1
+        grid-area: 1/1/1/3
+
+        color: $snow
+
+  .dualDisplayContainer
+    display: grid
+    grid-template-columns: $grid__tablet
+
+
+    margin-top: 120px
+    margin-bottom: 120px
+
+    .dualDisplayGrid
+      grid-column: $subgrid-column
+
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
+
+
+      .dualDisplay__item
+        display: grid
+        grid-template-columns: $subGrid
+        grid-template-rows: 445px 186px
+
+
+        max-width: 100%
+
+        margin-bottom: 120px
+
+        justify-content: center
+        align-items: center
+
+        h2
+          color: $navy
+
+        p
+          color: $dim-grey
+
+
+        img
+          display: block
+          border-radius: 50%
+          max-width: 445px
+          max-height: 445px
+          width: 100%
+          height: auto
+
+          justify-self: center
+
+          margin-bottom: 56px
+
+        .dualDisplay__item__img--right, .dualDisplay__item__img--left
+          grid-area: 1 / 3 / 1 / 11
+          max-width: 100%
+          width: 100%
+          justify-self: center
+
+          overflow: hidden
+
+        .dualDisplay__item__text--left, .dualDisplay__item__text--right
+          grid-area: 2 / 3 / 2 / 11
+          text-align: center
+
+
+  .valuesContainer
+    display: grid
+    grid-template-columns: $grid__tablet
+
+    h2
+      grid-column: $subgrid-column
+      grid-row: 1
+      align-self: center
+      justify-self: center
+
+      margin-bottom: 48px
+
+    .values__grid
+      grid-column: $subgrid-column
+
+      display: grid
+      grid-template-columns: $subGrid
+      grid-template-rows: 1fr 1fr 1fr
+
+      gap: 30px
+
+      .values__item
+        grid-column-start: 3
+        grid-column-end: 11
+        position: relative
+
+        display: flex
+        flex-wrap: wrap
+
+        justify-content: center
+        align-items: center
+
+        .values__item__img
+          display: flex
+
+
+          justify-content: center
+          align-items: center
+
+          height: 350px
+          width: 100%
+
+          margin-bottom: 32px
+
+        img
+          border-radius: 50%
+          max-width: 240px
+          height: 240px
+
+      .values__item__number
+        position: absolute
+
+        top: 254px
+
+        text-align: center
+
+        background-color: $yellow
+        border-radius: 50%
+
+        padding: 34px
+
+      .values__item__title
+
+
+      .values__item__text
+        margin-top: 27px
+        text-align: center
+
+  .faqContainer
+    display: grid
+    grid-template-columns: $grid__tablet
+    gap: 64px
+
+    justify-content: center
+    align-items: center
+
+    margin-bottom: 160px
+
+    h2
+      grid-column: $subgrid-column
+      grid-row: 1
+
+      justify-self: center
+      align-self: center
+
+      margin-top: 120px
+
+    .faqGrid
+      grid-column: $subgrid-column
+      grid-row: 2
+
+      display: grid
+      grid-template-rows: repeat(2, 1fr)
+      grid-template-columns: 1fr
+      gap: 64px
+
+      .faq__item
+        grid-column: 1
+
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(4, 1fr)
+
+        .faq__item__title
+          grid-row: 1
+          align-self: center
+          text-align: center
+
+        .faq__item__dropdown
+          display: flex
+          flex-wrap: wrap
+
+          justify-content: space-between
+
+          margin-bottom: 16px
+          padding: 32px 40px
+
+          background-color: $snow
+
+          transition: background-color .3s
+
+          &:hover
+            background-color: #FFF4DF
+
+          h4
+            width: 90%
+
+          img
+            position: relative
+
+            width: 16px
+            height: 8px
+
+            align-self: center
+            justify-self: end

@@ -1,0 +1,262 @@
+@use "../../library" as *
+
+@media screen and (max-width: 425px)
+  body
+    h2
+      color: $navy
+      font-size: 32px
+
+    h3
+      font-size: 24px
+
+    h4
+      font-size: 18px
+
+    p
+      font-size: 15px
+
+  .headContainer
+    display: grid
+    grid-template-columns: $grid__tablet
+
+    overflow: hidden
+
+    height: 160px
+
+    .mask
+      grid-row: 2
+
+      height: 160px
+
+      grid-column-start: 1
+      grid-column-end: 4
+      background-color: #2F3B59
+      opacity: 0.75
+      z-index: 1
+
+    img
+      grid-row: 2
+
+      width: 100%
+      height: 160px
+
+      grid-column-start: 1
+      grid-column-end: 4
+      object-fit: cover
+      background-color: #2F3B59
+      z-index: 0
+
+    .head
+      grid-column: $subgrid-column
+      grid-row: 2
+
+      z-index: 2
+      align-items: center
+      display: grid
+
+
+      h1
+        text-align: center
+
+        color: $snow
+
+  .dualDisplayContainer
+    display: grid
+    grid-template-columns: $grid__mobile
+
+
+    margin-top: 72px
+    margin-bottom: 72px
+
+    .dualDisplayGrid
+      grid-column: $subgrid-column
+
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
+
+
+      .dualDisplay__item
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 311px 1fr
+
+
+        max-width: 100%
+
+        margin-bottom: 120px
+
+        justify-content: center
+        align-items: center
+
+
+        p
+          color: $dim-grey
+          text-align: justify-all
+
+
+        img
+          display: block
+          border-radius: 50%
+          max-width: 311px
+          max-height: 311px
+          width: 100%
+          height: auto
+
+          justify-self: center
+
+        .dualDisplay__item__img--right, .dualDisplay__item__img--left
+          grid-row: 1
+          max-width: 100%
+          width: 100%
+          height: auto
+
+          justify-self: center
+
+          overflow: hidden
+
+
+        .dualDisplay__item__text--left, .dualDisplay__item__text--right
+          grid-row: 2
+          text-align: center
+
+          margin-top: 56px
+
+  .valuesContainer
+    display: grid
+    grid-template-columns: $grid__mobile
+
+    h2
+      grid-column: $subgrid-column
+      grid-row: 1
+      align-self: center
+      justify-self: center
+
+      margin-bottom: 145px
+
+    .values__grid
+      grid-column: $subgrid-column
+
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr 1fr
+
+      gap: 56px
+
+      .values__item
+        position: relative
+
+        display: flex
+        flex-wrap: wrap
+
+        justify-content: center
+        align-items: center
+
+        .values__item__img
+          display: flex
+
+
+          justify-content: center
+          align-items: center
+
+          height: 350px
+          width: 100%
+
+          margin-bottom: 32px
+
+        img
+          display: block
+          border-radius: 50%
+          max-width: 240px
+          max-height: 240px
+          width: 100%
+          height: auto
+
+          justify-self: center
+
+      .values__item__number
+        position: absolute
+
+        top: 254px
+
+        text-align: center
+
+        background-color: $yellow
+        border-radius: 50%
+
+        padding: 34px
+
+
+      .values__item__text
+        margin-top: 27px
+        text-align: center
+
+  .faqContainer
+    display: grid
+    grid-template-columns: $grid__mobile
+    gap: 48px
+
+    justify-content: center
+    align-items: center
+
+    margin-bottom: 120px
+
+    h2
+      grid-column: $subgrid-column
+      grid-row: 1
+
+      justify-self: center
+      align-self: center
+
+      margin-top: 120px
+
+    .faqGrid
+      grid-column: $subgrid-column
+      grid-row: 2
+
+      display: grid
+      grid-template-rows: repeat(2, 1fr)
+      grid-template-columns: 1fr
+      gap: 64px
+
+      .faq__item
+        grid-column: 1
+
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows: 28px repeat(3, 1fr)
+
+        .faq__item__title
+          grid-row: 1
+          align-self: center
+          text-align: left
+
+          margin-bottom: 32px
+
+        .faq__item__dropdown
+          display: flex
+          flex-wrap: wrap
+
+          justify-content: space-between
+
+          margin-bottom: 16px
+          padding: 32px 40px
+
+          background-color: $snow
+
+          transition: background-color .3s
+
+          &:hover
+            background-color: #FFF4DF
+
+          h4
+            width: 90%
+
+          img
+            position: relative
+
+            width: 16px
+            height: 8px
+
+            align-self: center
+            justify-self: end

@@ -1,4 +1,5 @@
 @use '../../library' as *
+@use 'mobile'
 @use 'tablet'
 
 @media screen and (min-width: 1026px)
@@ -80,7 +81,10 @@
           color: $dim-grey
 
         img
+          display: block
           border-radius: 50%
+          max-width: 445px
+          max-height: 445px
           width: 100%
           height: auto
 

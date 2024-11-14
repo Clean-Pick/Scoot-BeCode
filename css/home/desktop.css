@@ -1,0 +1,462 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Open+Sans:ital,wght@0,600;1,600&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.mainGrid {
+  display: grid;
+}
+
+body h1 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 56px;
+  line-height: 56px;
+  letter-spacing: -2.5px;
+  color: rgb(73, 85, 103);
+}
+body h2 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  letter-spacing: -2.14px;
+  color: rgb(73, 85, 103);
+}
+body h3 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -1.79px;
+}
+body h4 {
+  font-family: space mono, bold, sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1.07px;
+}
+body p {
+  font-family: lexend Deca, regular, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  color: rgb(147, 156, 170);
+}
+body button {
+  font-family: space mono, bold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  background-color: rgb(252, 183, 43);
+  color: rgb(242, 245, 249);
+  border: none;
+  width: 195px;
+  height: 53px;
+  text-transform: capitalize;
+  transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+body button:hover {
+  background-color: rgb(242, 245, 249);
+  color: rgb(252, 183, 43);
+  border: 2px solid rgb(252, 183, 43);
+}
+body .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  background-color: rgb(252, 183, 43);
+  border: none;
+  padding: 1.1em 4.5em;
+  transition: background-color 0.2s, outline 0.2s;
+}
+body .btn:hover {
+  background-color: rgb(242, 245, 249);
+  outline: 2px solid rgb(252, 183, 43);
+  outline-offset: -2px;
+}
+body .btn:hover .btn__text {
+  color: rgb(252, 183, 43);
+}
+body .btn .btn__text {
+  font-family: space mono, bold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+  color: rgb(242, 245, 249);
+  text-transform: capitalize;
+  text-decoration: none;
+  text-underline: none;
+  transition: color 0.2s;
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .mainGrid {
+    grid-template-columns: 40px 12fr 40px;
+  }
+  .header {
+    grid-column: 2;
+    height: 96px;
+  }
+  .img {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    height: 650px;
+    width: 100%;
+  }
+  .img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .home {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr 12fr 1fr;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(242, 245, 249);
+  }
+  .home h1, .home p, .home a {
+    grid-column: 2;
+  }
+  .home h1 {
+    margin-top: 137px;
+  }
+  .home p {
+    margin-bottom: 32px;
+  }
+  .home a {
+    margin-bottom: 217px;
+    width: 245px;
+    justify-self: center;
+  }
+  .stepsContainer {
+    grid-column: 2;
+  }
+  .contentContainer {
+    grid-column: 2;
+  }
+}
+@media (min-width: 769px) {
+  .mainGrid {
+    grid-template-columns: 1fr 1110px 1fr;
+  }
+  .header {
+    grid-column: 2;
+    display: block;
+  }
+  .img {
+    grid-area: 2/1/2/4;
+    height: 650px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 160px;
+  }
+  .img .mask {
+    grid-column: 1;
+    grid-row: 1;
+    height: 650px;
+    width: 100%;
+    background-color: #2F3B59;
+    opacity: 0.75;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .img img {
+    grid-column: 1;
+    grid-row: 1;
+    height: 650px;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .home {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 650px;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: rgb(242, 245, 249);
+    z-index: 2;
+  }
+  .home h1 {
+    grid-area: 1/2/1/8;
+    margin-top: 153px;
+    color: white;
+  }
+  .home p {
+    grid-area: 2/3/2/8;
+    color: white;
+  }
+  .home a {
+    grid-area: 3/3/3/6;
+    height: 53px;
+    width: 250px;
+    margin-bottom: 153px;
+  }
+  .stepsContainer {
+    grid-column: 2;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1110px 1fr;
+  }
+  .stepsContainer .stepsGrid {
+    position: relative;
+    grid-column: 2;
+    margin-top: 160px;
+    margin-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 27px;
+    justify-content: center;
+    align-items: center;
+  }
+  .stepsContainer .stepsGrid hr {
+    grid-row: 1;
+    grid-column-start: 1;
+    grid-column-end: 10;
+    border: none;
+    height: 15px;
+    width: 100%;
+    background-color: rgb(229, 236, 244);
+  }
+  .stepsContainer .stepsGrid img {
+    height: 96px;
+    width: 96px;
+    grid-row: 1;
+    object-fit: contain;
+  }
+  .stepsContainer .stepsGrid .step1, .stepsContainer .stepsGrid .step2, .stepsContainer .stepsGrid .step3 {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    overflow: hidden;
+  }
+  .stepsContainer .stepsGrid p {
+    margin-top: -10px;
+    color: rgb(147, 156, 170);
+  }
+  .stepsContainer .stepsGrid h4 {
+    color: rgb(73, 85, 103);
+  }
+  .stepsContainer .stepsGrid .step1 {
+    grid-area: 1/1/4/5;
+  }
+  .stepsContainer .stepsGrid .step2 {
+    grid-area: 1/5/4/9;
+  }
+  .stepsContainer .stepsGrid .step3 {
+    grid-area: 1/9/4/13;
+  }
+  .contentContainer {
+    grid-column: 2;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 1fr 1110px 1fr;
+  }
+  .contentContainer .contentGrid {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 160px;
+  }
+  .contentContainer .item__container {
+    grid-row: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 220px;
+    justify-content: center;
+    align-items: center;
+  }
+  .contentContainer .item__content--left {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .contentContainer .item__content--right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .contentContainer p {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    color: rgb(147, 156, 170);
+  }
+  .contentContainer a {
+    width: 250px;
+  }
+  .contentContainer h2 {
+    color: rgb(73, 85, 103);
+  }
+  .contentContainer .item__img--left {
+    grid-column: 1;
+    grid-row: 1;
+    border-radius: 50%;
+  }
+  .contentContainer .item__img--right {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .contentContainer img {
+    border-radius: 50%;
+  }
+}
+
+/*# sourceMappingURL=desktop.css.map */

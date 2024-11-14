@@ -159,12 +159,14 @@ body h1 {
   font-size: 56px;
   line-height: 56px;
   letter-spacing: -2.5px;
+  color: rgb(73, 85, 103);
 }
 body h2 {
   font-family: space mono, bold, sans-serif;
   font-size: 48px;
   line-height: 48px;
   letter-spacing: -2.14px;
+  color: rgb(73, 85, 103);
 }
 body h3 {
   font-family: space mono, bold, sans-serif;
@@ -182,6 +184,7 @@ body p {
   font-family: lexend Deca, regular, sans-serif;
   font-size: 15px;
   line-height: 25px;
+  color: rgb(147, 156, 170);
 }
 body button {
   font-family: space mono, bold, sans-serif;
@@ -230,31 +233,52 @@ body .btn .btn__text {
   transition: color 0.2s;
 }
 
-@media (min-width: 375px) and (max-width: 1440px) {
-  .mainGrid {
-    grid-template-columns: 40px 12fr 40px;
-    grid-template-rows: repeat(5, 1fr);
-  }
-  .home {
-    grid-column: 2;
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .home img {
-    grid-column: 1;
-  }
-  .home h1 {
-    grid-row: 1;
-  }
-  .home hr {
-    grid-row: 2;
-  }
-  .home p {
-    grid-row: 2;
-  }
-  .home a {
-    grid-row: 4;
-  }
+header {
+  color: rgb(242, 245, 249);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header img {
+  width: 107.82px;
+  height: 28.56px;
+  margin-right: 4em;
+  margin-left: 7.5em;
+}
+header nav {
+  display: flex;
+  gap: 1.5em;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: rgb(242, 245, 249);
+  font-family: space mono, sans-serif;
+}
+header nav a h4 {
+  color: rgb(147, 156, 170);
+  font-family: space mono, bold, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -1.07px;
+  margin: 0;
+}
+header button {
+  background-color: rgb(252, 183, 43);
+  color: rgb(242, 245, 249);
+  padding: 0.5em 1.2em;
+  border: none;
+  cursor: pointer;
+  font-family: space mono, sans-serif;
+  font-size: 15px;
+  line-height: 25px;
+  margin-left: auto;
+  margin-right: 7em;
+}
+header button:hover {
+  background-color: rgb(242, 245, 249);
+  color: rgb(252, 183, 43);
 }
 
-/*# sourceMappingURL=tablet.css.map */
+/*# sourceMappingURL=header.css.map */

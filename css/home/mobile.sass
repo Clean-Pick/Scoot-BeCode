@@ -1,0 +1,148 @@
+@use '../../library' as *
+
+@media screen and (max-width: 768px)
+  .mainGrid
+    grid-template-columns: $grid__mobile
+
+  header, footer
+    grid-column: $subgrid-column
+    height: 96px
+
+
+  .img
+    grid-area: 2 / 1 / 2 / 4
+
+    height: 650px
+    width: 100%
+
+    img
+      height: 100%
+      width: 100%
+
+      object-fit: cover
+
+
+  .home
+    grid-column: $subgrid-column
+    grid-row: 2
+
+    display: grid
+    grid-template-columns: 1fr
+
+    justify-content: center
+    align-items: center
+
+    text-align: center
+
+    color: $snow
+
+    h1, p, a
+      grid-column: 2
+      color: white
+
+    h1
+      margin-top: 137px
+
+    p
+      margin-bottom: 32px
+
+    a
+      margin-bottom: 122px
+      width: 245px
+      justify-self: center
+
+
+  .stepsContainer
+    grid-column: $subgrid-column
+    margin-bottom: 145px
+
+    .stepsGrid
+      display: grid
+      grid-template-rows: 1fr 1fr 1fr
+
+      gap: 40px
+      height: 470px
+
+      position: relative
+
+      margin-top: 122px
+
+      hr
+        position: absolute
+        top: -130px
+        left: 100px
+
+        border: none
+
+        height: 513px
+        width: 15px
+
+        background-color: $grey-light
+
+        z-index: 0
+
+
+      .step1, .step2, .step3
+        display: grid
+        grid-template-columns: $subGrid
+
+        grid-template-rows: 1fr 1fr
+
+        justify-content: center
+        align-items: center
+
+
+        gap: 27px
+
+        height: 130px
+
+        z-index: 1
+
+        img
+          grid-area: 1 / 2 / 3 / 5
+          width: 96px
+          height: 96px
+
+
+        h4, p
+          grid-column-start: 5
+          grid-column-end: 13
+          justify-self: start
+          text-align: left
+
+
+  .contentContainer
+    grid-column: $subgrid-column
+
+    .contentGrid
+      grid-template-rows: 1fr 1fr 1fr
+
+      .item__container
+        display: grid
+
+        grid-template-rows: 1fr 1fr
+
+        gap: 64px
+
+        .item__img, .item__img--left, .item__img--right
+          grid-row: 1
+          height: 445px
+          width: 445px
+
+          justify-self: center
+
+          img
+            border-radius: 50%
+
+        .item__content--left, .item__content--right
+          display: flex
+          flex-direction: column
+          gap: 40px
+
+          grid-row: 2
+          justify-self: center
+          text-align: center
+
+          a
+            width: 240px
+            align-self: center

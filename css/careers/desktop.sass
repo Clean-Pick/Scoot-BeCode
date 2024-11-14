@@ -3,180 +3,180 @@
 @use 'tablet'
 
 @media screen and (min-width: 769px)
-.headContainer
-  display: grid
-  grid-template-columns: $grid__desktop
-
-  overflow: hidden
-
-  .mask
-
-    grid-area: 1/1/1/13
-    background-color: #2F3B59
-    opacity: 0.75
-    z-index: 1
-
-  img
-    grid-area: 1/1/1/13
-    object-fit: contain
-    background-color: #2F3B59
-    z-index: -1
-
-  .head
-    grid-column: $subgrid-column
-    grid-row: 1
-
-    z-index: 2
-
-    align-items: center
-
-
+  .headContainer
     display: grid
-    grid-template-columns: $subGrid
+    grid-template-columns: $grid__desktop
+
+    overflow: hidden
+
+    .mask
+
+      grid-area: 1/1/1/13
+      background-color: #2F3B59
+      opacity: 0.75
+      z-index: 1
+
+    img
+      grid-area: 1/1/1/13
+      object-fit: contain
+      background-color: #2F3B59
+      z-index: -1
+
+    .head
+      grid-column: $subgrid-column
+      grid-row: 1
+
+      z-index: 2
+
+      align-items: center
 
 
-    h1
-      grid-area: 1/1/1/3
-
-      color: $snow
-
-.dualDisplayContainer
-  display: grid
-  grid-template-columns: $grid__desktop
-
-  margin-top: 120px
-  margin-bottom: 120px
-
-  .dualDisplayGrid
-    grid-column: $subgrid-column
-
-    display: grid
-    grid-template-columns: 1fr
-
-    .dualDisplay__item
       display: grid
-      grid-template-columns: 1fr 1fr
-
-      gap: 190px
-
-      justify-content: center
-      align-items: center
-
-      h2
-        color: $navy
-
-      p
-        color: $dim-grey
-
-        margin-top: 24px
-        margin-bottom: 40px
+      grid-template-columns: $subGrid
 
 
-      img
-        border-radius: 50%
+      h1
+        grid-area: 1/1/1/3
 
-      a
-        width: 230px
+        color: $snow
 
-      .dualDisplay__item__text--left, .dualDisplay__item__img--left
-        grid-column: 1
-        grid-row: 1
-
-
-      .dualDisplay__item__text--right, .dualDisplay__item__img--right
-        grid-column: 2
-        grid-row: 1
-
-.valuesContainer
-  display: grid
-  grid-template-columns: $grid__desktop
-  gap: 50px
-
-  margin-bottom: 120px
-
-  h2
-    grid-column: $subgrid-column
-    grid-row: 1
-    align-self: center
-    justify-self: center
-
-  .values__grid
-    grid-column: $subgrid-column
-
+  .dualDisplayContainer
     display: grid
-    grid-template-columns: repeat(3, 1fr)
-    grid-template-rows: 512px
+    grid-template-columns: $grid__desktop
 
-    gap: 30px
+    margin-top: 120px
+    margin-bottom: 120px
 
-    .values__item
-      position: relative
+    .dualDisplayGrid
+      grid-column: $subgrid-column
 
-      display: flex
-      flex-wrap: wrap
+      display: grid
+      grid-template-columns: 1fr
 
-      justify-content: center
-      align-items: center
+      .dualDisplay__item
+        display: grid
+        grid-template-columns: 1fr 1fr
 
-      .values__item__img
-        display: flex
-
+        gap: 190px
 
         justify-content: center
         align-items: center
 
-        height: 350px
-        width: 350px
+        h2
+          color: $navy
 
-        margin-bottom: 32px
+        p
+          color: $dim-grey
 
-      img
-        border-radius: 50%
-        width: 240px
-        height: 240px
+          margin-top: 24px
+          margin-bottom: 40px
 
-    .values__item__number
-      position: absolute
 
-      top: 254px
+        img
+          border-radius: 50%
 
-      text-align: center
+        a
+          width: 230px
 
-      background-color: $yellow
-      border-radius: 50%
+        .dualDisplay__item__text--left, .dualDisplay__item__img--left
+          grid-column: 1
+          grid-row: 1
 
-      padding: 34px
 
-    .values__item__text
-      margin-top: 27px
-      text-align: center
+        .dualDisplay__item__text--right, .dualDisplay__item__img--right
+          grid-column: 2
+          grid-row: 1
 
-.jobsContainer
-  display: grid
-  grid-template-columns: $grid__desktop
-
-  margin-top: 120px
-  margin-bottom: 160px
-
-  .jobsGrid
-    grid-column: $subgrid-column
-
+  .valuesContainer
     display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: repeat(6, 1fr)
-    gap: 24px
+    grid-template-columns: $grid__desktop
+    gap: 50px
 
-    .jobs__item
-      display: flex
-      justify-content: space-around
-      align-items: center
+    margin-bottom: 120px
 
-      height: 128px
+    h2
+      grid-column: $subgrid-column
+      grid-row: 1
+      align-self: center
+      justify-self: center
 
-      background-color: $snow
+    .values__grid
+      grid-column: $subgrid-column
 
-    .jobs__item__jobInfos
-      width: 50%
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-template-rows: 512px
 
-      p
-        color: $navy
+      gap: 30px
+
+      .values__item
+        position: relative
+
+        display: flex
+        flex-wrap: wrap
+
+        justify-content: center
+        align-items: center
+
+        .values__item__img
+          display: flex
+
+
+          justify-content: center
+          align-items: center
+
+          height: 350px
+          width: 350px
+
+          margin-bottom: 32px
+
+        img
+          border-radius: 50%
+          width: 240px
+          height: 240px
+
+      .values__item__number
+        position: absolute
+
+        top: 254px
+
+        text-align: center
+
+        background-color: $yellow
+        border-radius: 50%
+
+        padding: 34px
+
+      .values__item__text
+        margin-top: 27px
+        text-align: center
+
+  .jobsContainer
+    display: grid
+    grid-template-columns: $grid__desktop
+
+    margin-top: 120px
+    margin-bottom: 160px
+
+    .jobsGrid
+      grid-column: $subgrid-column
+
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(6, 1fr)
+      gap: 24px
+
+      .jobs__item
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+        height: 128px
+
+        background-color: $snow
+
+      .jobs__item__jobInfos
+        width: 50%
+
+        p
+          color: $navy
